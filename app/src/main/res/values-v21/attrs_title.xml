@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TitleAttrs">
+        <attr name="titleLeftTxt" format="string"/>
+        <attr name="titleRightTxt" format="string"/>
+        <attr name="titleName" format="string" />
+        <attr name="titleLeftImg" format="reference" />
+        <attr name="titleRightImg" format="reference" />
+        <attr name="titleRightImg2" format="reference" />
+        <attr name="titleBg" format="reference|color" />
+        <attr name="titleGravity">
+            <enum name="left" value="1" />
+            <enum name="center" value="2" />
+            <enum name="right" value="3" />
+        </attr>
+        <attr name="titleLeftVisibility">
+            <enum name="visible" value="1" />
+            <enum name="invisible" value="2" />
+            <enum name="gone" value="3" />
+        </attr>
+        <attr name="titleRightVisibility">
+            <enum name="visible" value="1" />
+            <enum name="invisible" value="2" />
+            <enum name="gone" value="3" />
+        </attr>
+
+        <attr name="titleRight2Visibility">
+            <enum name="visible" value="1" />
+            <enum name="invisible" value="2" />
+            <enum name="gone" value="3" />
+        </attr>
+
+        <!--很多情况无效-->
+        <attr name="titleLeftClose">
+            <enum name="close" value="1" />
+            <enum name="no" value="2" />
+        </attr>
+
+
+    </declare-styleable>
+
+</resources>
