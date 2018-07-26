@@ -26,4 +26,10 @@ public class DevilBuilder extends ActorBuilder {
     {
         actor.setHairstyle("光头");
     }
+
+    //覆盖钩子方法
+    public boolean isBareheaded()
+    {
+        return true;
+    }
 }

@@ -16,6 +16,13 @@ public class ActorController {
         ab.buildCostume();
         ab.buildHairstyle();
         actor=ab.createActor();
+
+        //通过钩子方法来控制产品的构建
+/*        if(!ab.isBareheaded()) {
+            ab. buildHairstyle();
+        }
+        actor=ab.createActor();
+        return  actor;*/
         return actor;
     }
 }

@@ -19,4 +19,9 @@ public abstract class ActorBuilder {
     {
         return actor;
     }
+
+    //钩子方法
+    public boolean isBareheaded() {
+        return false;
+    }
 }
