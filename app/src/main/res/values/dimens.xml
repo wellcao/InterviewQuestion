@@ -32,4 +32,6 @@
 
     <attr name="statusbarheight" format="dimension"/>
     <attr name="statusbarheight2" format="dimension"/>
+
+    <dimen name="aiteacher_row_textsize">10sp</dimen>
 </resources>

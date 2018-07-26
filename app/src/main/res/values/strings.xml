@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Decorator Demo</string>
+    <!--星星-->
+    <string name="iconfont_stars">&#xe63f;</string>
+    <string name="iconfont_0">&#xe60b;</string>
+    <string name="iconfont_1">&#xe60d;</string>
+    <string name="iconfont_2">&#xe610;</string>
+    <string name="iconfont_3">&#xe60e;</string>
+    <string name="iconfont_4">&#xe60f;</string>
+    <string name="iconfont_5">&#xe611;</string>
+    <string name="iconfont_6">&#xe613;</string>
+    <string name="iconfont_7">&#xe612;</string>
+    <string name="iconfont_8">&#xe615;</string>
+    <string name="iconfont_9">&#xe614;</string>
+    <string name="iconfont_add">&#xe60c;</string>
 </resources>

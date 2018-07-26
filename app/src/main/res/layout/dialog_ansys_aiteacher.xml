@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="500dp"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_dialog_report_aiteacher">
+    <Button
+        android:id="@+id/bt_close_aiteacher"
+        android:layout_width="80dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/selector_close_aiteacher"/>
+    <RelativeLayout
+        android:id="@+id/rl_left_report_aiteacher"
+        android:layout_width="250dp"
+        android:layout_height="208dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginLeft="30dp"
+        android:background="#7f304d96"
+        android:paddingTop="22dp"
+        android:paddingBottom="22dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp">
+        <TextView
+            android:id="@+id/tv_letter_header_aiteacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="Dear Baby:">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_letter_content_aiteacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="An ancient Hebraic text says&quot; love is as strong as death&quot;. It seems that not everyone experiences this kind of strong love. The increasing probably,crime and war tells us that the world is in indispensable need of true love."
+            android:layout_below="@+id/tv_letter_header_aiteacher">
+        </TextView>
+        <TextView
+            android:id="@+id/tv_left_footer_aiteacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:layout_below="@+id/tv_letter_content_aiteacher"
+            android:text="Yours Ai Teacther"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentRight="true">
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_right_top_report_aiteacher"
+        android:layout_width="185dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="63dp"
+        android:layout_toRightOf="@+id/rl_left_report_aiteacher"
+        android:layout_marginLeft="5dp"
+        android:background="#7f304d96">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="13dp"
+            android:text="开口时长"
+            android:textColor="#fff"
+            android:textSize="14dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="36dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom">
+            <wellcao.com.myresume.builder.IconFontTextView
+                android:id="@+id/tv_speekTime_left_aiteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:text="@string/iconfont_3" />
+            <wellcao.com.myresume.builder.IconFontTextView
+                android:id="@+id/tv_timecount_middle_aiteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:text="@string/iconfont_4" />
+            <wellcao.com.myresume.builder.IconFontTextView
+                android:id="@+id/tv_timecount_middle_aiteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:text="@string/iconfont_5"
+                tools:ignore="DuplicateIds" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="10dp"
+                android:text="MIN"
+                android:textStyle="bold" />
+            <wellcao.com.myresume.builder.IconFontTextView
+                android:id="@+id/tv_timecount_right_aiteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="20dp"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:text="@string/iconfont_stars" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fff"
+                android:textSize="10dp"
+                android:text="+"
+                android:textStyle="bold" />
+            <wellcao.com.myresume.builder.IconFontTextView
+                android:id="@+id/tv_star_left_aiteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:text="@string/iconfont_1" />
+            <wellcao.com.myresume.builder.IconFontTextView
+                android:id="@+id/tv_star_right_aiteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="17dp"
+                android:textColor="#fff"
+                android:text="@string/iconfont_8" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_right_bottom_report_aiteacher"
+        android:layout_width="185dp"
+        android:layout_height="138dp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/rl_left_report_aiteacher"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@+id/rl_right_top_report_aiteacher"
+        android:background="#7f304d96">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="bottom">
+                <wellcao.com.myresume.builder.IconFontTextView
+                android:id="@+id/tv_score_left_aiteacher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="20dp"
+                android:textColor="#fff"
+                android:text="@string/iconfont_3" />
+                <wellcao.com.myresume.builder.IconFontTextView
+                    android:id="@+id/tv_score_middle_aiteacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:text="@string/iconfont_3" />
+                <wellcao.com.myresume.builder.IconFontTextView
+                    android:id="@+id/tv_score_right_aiteacher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:text="@string/iconfont_4" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"
+                    android:textSize="10dp"
+                    android:text="分"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <wellcao.com.myresume.builder.RadarView
+                android:id="@+id/radar_aiteacher"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:margin="20dp"
+                android:layout_gravity="bottom|center_horizontal"/>
+        </FrameLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

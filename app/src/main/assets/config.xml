@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<classNameList>
+    <className>wellcao.com.myresume.builder.HeroBuilder</className>
+    <className>wellcao.com.myresume.builder.AngleBuilder</className>
+    <className>wellcao.com.myresume.builder.DevilBuilder</className>
+</classNameList>

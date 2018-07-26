@@ -82,5 +82,10 @@
         <item name="android:textColor">#ffffff</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="CommonDialogStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 
 </resources>
