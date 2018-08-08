@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/tv_output"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransParent">
+    <wellcao.com.myresume.TitleView
+        android:id="@+id/titleView_homework"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:layout_margin="20dp"
-        android:textColor="#333333"
-        android:text="aaa"/>
-    <Button
-        android:layout_width="80dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:text="运行"
-        android:textSize="14sp"
-        android:textColor="#333333"
-        android:onClick="perform"/>
+        app:titleGravity="center"
+        app:titleLeftClose="close"
+        app:titleLeftVisibility="visible"
+        app:titleName="设计模式"
+        android:fitsSystemWindows="true"/>
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_below="@+id/titleView_homework"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"/>
+
 </RelativeLayout>

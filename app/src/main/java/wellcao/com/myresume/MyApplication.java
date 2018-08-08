@@ -2,8 +2,6 @@ package wellcao.com.myresume;
 
 import android.app.Application;
 
-import com.tencent.bugly.crashreport.CrashReport;
-
 import wellcao.com.myresume.widget.MyToast;
 
 /**

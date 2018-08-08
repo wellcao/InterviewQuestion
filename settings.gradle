@@ -1,1 +1,1 @@
-include ':app','x5webview_lib'
+include ':app'
