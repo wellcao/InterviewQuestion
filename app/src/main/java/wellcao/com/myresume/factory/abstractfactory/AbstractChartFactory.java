@@ -1,0 +1,11 @@
+package wellcao.com.myresume.factory.abstractfactory;
+
+/**
+ * @author wellcao
+ * @date 2018/8/9
+ * class introduction:
+ */
+public interface AbstractChartFactory {
+    public Line createLineFactory();
+    public Pie createPieFactory();
+}

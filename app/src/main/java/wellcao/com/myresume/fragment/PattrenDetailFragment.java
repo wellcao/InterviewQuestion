@@ -2,9 +2,12 @@ package wellcao.com.myresume.fragment;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.io.File;
 
 import wellcao.com.myresume.R;
 import wellcao.com.myresume.TestActivity;
@@ -23,11 +26,15 @@ import wellcao.com.myresume.decorate.LimeJuiceDecorator;
 import wellcao.com.myresume.decorate.SugarDecorator;
 import wellcao.com.myresume.decorate.WhiteRumDecorator;
 import wellcao.com.myresume.extend.Drink;
+import wellcao.com.myresume.factory.abstractfactory.AbstractChartFactory;
+import wellcao.com.myresume.factory.abstractfactory.Line;
+import wellcao.com.myresume.factory.abstractfactory.RedChartFactory;
 import wellcao.com.myresume.factory.demo1.Chart;
 import wellcao.com.myresume.factory.factorymethod.LineFactory;
 import wellcao.com.myresume.factory.staticfactory.ChartFactory;
 import wellcao.com.myresume.realcase.DeviceInfo;
 import wellcao.com.myresume.realcase.DeviceInfoBase;
+import wellcao.com.myresume.utils.HomeworkMD5Util;
 import wellcao.com.myresume.utils.XmlUtils;
 
 /**
@@ -65,7 +72,8 @@ public class PattrenDetailFragment extends BaseFragment implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-        String output = doFactoryDemo1();
+       // String filePath = Environment.getExternalStorageDirectory().getPath()+"/aaa.jpg";
+        String output = doAbstractFactory();
         tvOutput.setText(output);
     }
 
@@ -159,5 +167,20 @@ public class PattrenDetailFragment extends BaseFragment implements View.OnClickL
         return  chart.display();
     }
 
+    public String doAbstractFactory(){
+        AbstractChartFactory factory = new RedChartFactory();
+        Line chart = factory.createLineFactory();
+        return chart.display();
+    }
 
+
+    private String getFileMD5(String filePath){
+        String str = "";
+        try {
+            str = HomeworkMD5Util.getInstance().getFileMD5String(new File(filePath));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
 }
