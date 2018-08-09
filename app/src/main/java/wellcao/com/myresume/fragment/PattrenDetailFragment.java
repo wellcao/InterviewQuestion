@@ -24,6 +24,7 @@ import wellcao.com.myresume.decorate.SugarDecorator;
 import wellcao.com.myresume.decorate.WhiteRumDecorator;
 import wellcao.com.myresume.extend.Drink;
 import wellcao.com.myresume.factory.demo1.Chart;
+import wellcao.com.myresume.factory.factorymethod.LineFactory;
 import wellcao.com.myresume.factory.staticfactory.ChartFactory;
 import wellcao.com.myresume.realcase.DeviceInfo;
 import wellcao.com.myresume.realcase.DeviceInfoBase;
@@ -152,6 +153,11 @@ public class PattrenDetailFragment extends BaseFragment implements View.OnClickL
         return chart.display();
     }
 
-    
+    private String doFactoryMethod(){
+        wellcao.com.myresume.factory.factorymethod.ChartFactory chartFactory = new LineFactory();
+        wellcao.com.myresume.factory.factorymethod.Chart chart = chartFactory.getProduct();
+        return  chart.display();
+    }
+
 
 }
