@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <!--  <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">-->
+    <wellcao.com.myresume.touchdispatch.ListScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:text="内容一"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--      <wellcao.com.myresume.touchdispatch.WrapContentListView
+                          android:id="@+id/lv_touch_dispatch"
+                          android:layout_width="match_parent"
+                          android:layout_height="600dp">
+                      </wellcao.com.myresume.touchdispatch.WrapContentListView>-->
+                <!--   <ListView
+                       android:id="@+id/lv_touch_dispatch"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+                   </ListView>-->
+
+                <wellcao.com.myresume.touchdispatch.ConsumerListView
+                    android:id="@+id/lv_touch_dispatch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </wellcao.com.myresume.touchdispatch.ConsumerListView>
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:text="内容二"/>
+        </LinearLayout>
+<!--    </ScrollView>-->
+    </wellcao.com.myresume.touchdispatch.ListScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_20BEF8"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_problem_lv_height"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="高度问题：异常"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="@color/colorWhite"/>
+        <include layout="@layout/divider_horizental"/>
+        <TextView
+            android:id="@+id/tv_solution_lv_height"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="高度问题：正常"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="@color/colorWhite"/>
+        <include layout="@layout/divider_horizental"/>
+        <TextView
+            android:id="@+id/tv_problem_touch_conflict"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="滑动问题：异常"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="@color/colorWhite"/>
+        <include layout="@layout/divider_horizental"/>
+        <TextView
+            android:id="@+id/tv_solution_touch_conflict"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="高度问题：正常"
+            android:gravity="center"
+            android:textSize="14dp"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+</RelativeLayout>

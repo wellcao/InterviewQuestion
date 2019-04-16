@@ -6,9 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import wellcao.com.myresume.R;
+import wellcao.com.myresume.TestActivity;
 import wellcao.com.myresume.adapter.PattrensAdapter;
 import wellcao.com.myresume.base.BaseFragment;
 import wellcao.com.myresume.base.IRecyclerAdapter;
+import wellcao.com.myresume.touchdispatch.TouchDispatchFragment;
 
 /**
  * @author wellcao
@@ -17,7 +19,7 @@ import wellcao.com.myresume.base.IRecyclerAdapter;
  */
 public class HomeFragment extends BaseFragment{
 
-    private final String[] patterns ={"装饰模式","桥接模式","建造者模式","工厂系列"};
+    private final String[] patterns ={"装饰模式","桥接模式","建造者模式","工厂系列","事件传递"};
     private RecyclerView rvPatterns;
     private PattrensAdapter mAdapter;
 
@@ -33,11 +35,7 @@ public class HomeFragment extends BaseFragment{
         mAdapter = new PattrensAdapter(new IRecyclerAdapter.OnItemCLickListener() {
             @Override
             public void onItemClick(int postion, View view) {
-                String patternName = patterns[postion];
-                Bundle b =new Bundle();
-                b.putString("title",patternName);
-                BaseFragment fragment = fragment(PattrenDetailFragment.class, b);
-                startFragment(fragment);
+                openFragment(postion);
             }
         });
         rvPatterns.setAdapter(mAdapter);
@@ -54,5 +52,22 @@ public class HomeFragment extends BaseFragment{
     @Override
     protected void initListener() {
 
+    }
+
+    private void openFragment(int position){
+        String patternName = patterns[position];
+        Bundle b =new Bundle();
+        b.putString("title",patternName);
+        ((TestActivity)getActivity()).setTitleName(patternName);
+        BaseFragment fragment = null;
+        switch (patternName){
+            case "事件传递":
+                fragment = fragment(TouchDispatchFragment.class, b);
+                break;
+            default:
+                fragment = fragment(PattrenDetailFragment.class, b);
+                break;
+        }
+        startFragment(fragment);
     }
 }
