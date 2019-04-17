@@ -10,6 +10,8 @@ import wellcao.com.myresume.TestActivity;
 import wellcao.com.myresume.adapter.PattrensAdapter;
 import wellcao.com.myresume.base.BaseFragment;
 import wellcao.com.myresume.base.IRecyclerAdapter;
+import wellcao.com.myresume.die_lock.DieLocKFragment;
+import wellcao.com.myresume.singleton.SingletonFragment;
 import wellcao.com.myresume.touchdispatch.TouchDispatchFragment;
 
 /**
@@ -19,7 +21,7 @@ import wellcao.com.myresume.touchdispatch.TouchDispatchFragment;
  */
 public class HomeFragment extends BaseFragment{
 
-    private final String[] patterns ={"装饰模式","桥接模式","建造者模式","工厂系列","事件传递"};
+    private final String[] patterns ={"装饰模式","桥接模式","建造者模式","工厂系列","事件传递","单例模式","死锁问题"};
     private RecyclerView rvPatterns;
     private PattrensAdapter mAdapter;
 
@@ -63,6 +65,12 @@ public class HomeFragment extends BaseFragment{
         switch (patternName){
             case "事件传递":
                 fragment = fragment(TouchDispatchFragment.class, b);
+                break;
+            case "单例模式":
+                fragment = fragment(SingletonFragment.class, b);
+                break;
+            case "死锁问题":
+                fragment = fragment(DieLocKFragment.class,b);
                 break;
             default:
                 fragment = fragment(PattrenDetailFragment.class, b);

@@ -54,20 +54,28 @@ public class ConsumerListView extends ListView {
                 }
             }
             lastY = ev.getY();
-            return super.dispatchTouchEvent(ev);
+            boolean result = super.dispatchTouchEvent(ev);
+            System.out.println("____ListView  $  dispatchTouchEvent()  $  value = "+result);
+            return result;
         }else {
-            return super.dispatchTouchEvent(ev);
+            boolean result = super.dispatchTouchEvent(ev);
+            System.out.println("____ListView  $  dispatchTouchEvent()  $  value = "+result);
+            return result;
         }
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        return super.onInterceptTouchEvent(ev);
+        boolean result = super.onInterceptTouchEvent(ev);
+        System.out.println("____ListView  $  onInterceptTouchEvent()  $  value = "+result);
+        return result;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
-        return super.onTouchEvent(ev);
+        boolean result = super.onTouchEvent(ev);
+        System.out.println("____ListView  $  onTouchEvent()  $  value = "+result);
+        return result;
     }
 
 

@@ -40,7 +40,9 @@ public class ListScrollView extends ScrollView {
      /*   if (listView != null && checkArea(listView, ev)) {
             return false;
         }*/
-        return super.dispatchTouchEvent(ev);
+        boolean result =  super.dispatchTouchEvent(ev);
+        System.out.println("____ScrollView  $  dispatchTouchEvent()  $  value = "+result);
+        return result;
 //     return listView.dispatchTouchEvent(ev);
     }
 
@@ -54,11 +56,15 @@ public class ListScrollView extends ScrollView {
         if (solutionOn){
             if (ev.getAction() == MotionEvent.ACTION_DOWN) {
                 onTouchEvent(ev);
+                System.out.println("____ScrollView  $  onInterceptTouchEvent()  $  value = "+false);
                 return false;
             }
+            System.out.println("____ScrollView  $  onInterceptTouchEvent()  $  value = "+true);
             return true;
         }else {
-            return super.onInterceptTouchEvent(ev);
+            boolean result = super.onInterceptTouchEvent(ev);
+            System.out.println("____ScrollView  $  onInterceptTouchEvent()  $  value = "+result);
+            return result;
         }
     }
 
@@ -68,7 +74,9 @@ public class ListScrollView extends ScrollView {
         //if (listView != null && checkArea(listView, ev)) {
         //   return listView.dispatchTouchEvent(ev);
         //}
-        return super.onTouchEvent(ev);
+        boolean result = super.onTouchEvent(ev);
+        System.out.println("____ScrollView  $  onTouchEvent()  $  value = "+result);
+        return result;
     }
 
     /**

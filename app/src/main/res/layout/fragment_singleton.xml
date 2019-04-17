@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_singleton_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/color_2B9EEC">
+        <TextView
+            android:id="@+id/tv_first_singleton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="第一种"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+        <include layout="@layout/divider_horizental"/>
+        <TextView
+            android:id="@+id/tv_second_singleton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="第二种"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+        <include layout="@layout/divider_horizental"
+            />
+        <TextView
+            android:id="@+id/tv_third_singleton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="第三种"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+        <include layout="@layout/divider_horizental" />
+        <TextView
+            android:id="@+id/tv_forth_singleton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="第四种"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"/>
+    </LinearLayout>
+  <!--  <ImageView
+        android:id="@+id/iv_content_singleton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#3333"
+        android:padding="5dp"
+        android:layout_above="@+id/ll_singleton_bottom"/>-->
+    <TextView
+        android:id="@+id/tv_content_singleton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_singleton_bottom"/>
+</RelativeLayout>

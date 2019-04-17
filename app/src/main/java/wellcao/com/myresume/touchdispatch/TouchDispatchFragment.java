@@ -22,11 +22,11 @@ import wellcao.com.myresume.base.BaseFragment;
  *       solution 1:  重写ListView的onMeaure()，设置测量方式为At_Most
  *       solution 2:  动态指定ListView的高度  ( 这种方式必须用LinearLayout包裹住ListView，这样设置才会有效 )
  *
- *  ②.  动态设定ListView的高度解决只显示第一个条目的问题后，发现ListView滑不动
- *       solution 1:  外部拦截法  ListScrollView
- *                    未处理的情况下   dispatchTouchEvent()  :true  - >  onInterceptTouchEvent() :  false   ->  onTouchEvent()  :  true
  *
- *                    这里我们只需要
+ *  ②.  滑动冲突，ScrollView消费了滑动事件，导致Listview滑不动
+ *       solution 1:  外部拦截法  ListScrollView
+ *       solution
+ *
  */
 
 public class TouchDispatchFragment extends BaseFragment implements View.OnClickListener{
